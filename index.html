@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Facebook Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
         }
 
         form {
@@ -35,28 +44,53 @@
         }
 
         button {
-            background-color: #4caf50;
+            background-color: gray;
             color: #fff;
-            padding: 10px;
+            padding: 10px 15px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        .signInLink {
+            margin-top: 20px;
+        }
+
+        .signInLink a {
+            color: #007bff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Your existing code here -->
 
-    <form>
-        <h2>Login</h2>
-        <label for="username">Enter your username:</label>
-        <input type="text" id="username" name="username" required>
+        <h2><span style="color:red">Facebook Login</span></h2>
+        <form id="loginForm">
+            <label for="username">1. Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        <label for="password">Enter your password:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password">2. Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <button type="submit">Login</button>
-    </form>
+            <button type="submit">Login with Facebook</button>
+            
+            <div class="signInLink">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </form>
+    </div>
 
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Successfully Logged in with Facebook");
+        });
+    </script>
 </body>
 </html>
-
