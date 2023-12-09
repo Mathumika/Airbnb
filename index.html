@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combined Page</title>
+    <title>Facebook Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,28 +20,6 @@
             width: 80%;
             max-width: 800px;
             text-align: center;
-        }
-
-        hr {
-            background-color: black;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 0.5px solid black;
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 15px;
-        }
-
-        .facebookIcon {
-            width: 50px;
-            height: 50px;
-            margin-top: 20px;
         }
 
         form {
@@ -66,6 +44,23 @@
             border-radius: 4px;
         }
 
+        table, th, td {
+            border: 0.5px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        .facebookIcon {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+        }
+
         button {
             background-color: gray;
             color: #fff;
@@ -88,55 +83,24 @@
             text-decoration: none;
         }
     </style>
-    <style>
-        form {
-            max-width: 300px;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">   
         <h4><u>Ordered Lists</u></h4>
         <h5><b>Food</b></h5>
         <ol>
-            <li>1. Momos</li>
-            <li>2. Pizza</li>
-            <li>3. Noodles</li>
-            <li>4. Pasta</li>
+            <li>Momos</li>
+            <li>Pizza</li>
+            <li>Noodles</li>
+            <li>Pasta</li>
         </ol>
 
         <h4><u>Unordered Lists</u></h4>
         <h5><b>Clothes:</b></h5>
         <ul>
-            <li>1. Shirt</li>
-            <li>2. Skirt</li>
-            <li>3. Pants</li>
+            <li>Shirt</li>
+            <li>Skirt</li>
+            <li>Pants</li>
         </ul>
 
         <table>
@@ -178,10 +142,10 @@
 
         <h2><span style="color:red">Facebook Login</span></h2> 
         <form id="loginForm">
-            <label for="username">1. Username:</label>
+            <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
-            <label for="password">2. Password:</label>
+            <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Login with Facebook</button>
@@ -190,12 +154,10 @@
                 <p>Don't have an account? <a href="#">Sign up</a></p>
             </div>
         </form>
-
-        <hr>
-
-        <!-- Your existing login form code goes here -->
-        <!-- Use the existing styling for the form -->
-        <!-- The second login form has been removed -->
     </div>
-</body>
-</html>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Successfully Logged in with Facebook");
+       
