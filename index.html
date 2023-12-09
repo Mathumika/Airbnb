@@ -8,19 +8,26 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 10;
-            padding: 50px;
-            display: table;
+            margin: 0;
+            padding: 0;
+            display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
         }
 
         form {
             background-color: rgb(190, 190, 190);
-            padding: 60px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         label {
@@ -30,7 +37,7 @@
 
         input {
             width: 100%;
-            padding: 5px;
+            padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
             border: 1px solid #ccc;
@@ -40,15 +47,18 @@
         table, th, td {
             border: 0.5px solid black;
             border-collapse: collapse;
-        }
-
-        table.center {
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            margin-top: 20px;
         }
 
         th, td {
             padding: 15px;
+        }
+
+        .facebookIcon {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
         }
 
         button {
@@ -65,18 +75,12 @@
         }
 
         .signInLink {
-            text-align: center;
-            margin-top: 2px;
+            margin-top: 20px;
         }
 
         .signInLink a {
             color: #007bff;
             text-decoration: none;
-        }
-
-        .facebookIcon {
-            width: 50px; /* Adjust the width of the Facebook icon */
-            height: 50px; /* Adjust the height of the Facebook icon */
         }
     </style>
 </head>
@@ -99,7 +103,7 @@
             <li>Pants</li>
         </ul>
 
-        <table class="center" style="width:100%">
+        <table>
             <h3>Book Details</h3>
             <tr>
                 <th>Title</th>
@@ -133,10 +137,8 @@
             </tr>
         </table>
 
-        <br>
         <h4>Image Tag</h4>
         <img src="images/facebook-icon.png" alt="Facebook Icon" class="facebookIcon">
-        <br>
 
         <h2><span style="color:red">Facebook Login</span></h2> 
         <form id="loginForm">
@@ -158,7 +160,6 @@
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
             alert("Successfully Logged in with Facebook");
-        });
-    </script>
-</body>
-</html>
+       
+
+                                                            
