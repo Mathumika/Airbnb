@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Login</title>
+    <title>Combined Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,13 +22,34 @@
             text-align: center;
         }
 
+        hr {
+            background-color: black;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 0.5px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        .facebookIcon {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+        }
+
         form {
-            max-width: 300px;
-            margin: 50px auto;
-            background: #fff;
+            background-color: rgb(190, 190, 190);
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         label {
@@ -39,8 +60,10 @@
         input {
             width: 100%;
             padding: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
         button {
@@ -65,12 +88,95 @@
             text-decoration: none;
         }
     </style>
+    <style>
+        form {
+            max-width: 300px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Your existing code here -->
+    <div class="container">   
+        <h4><u>Ordered Lists</u></h4>
+        <h5><b>Food</b></h5>
+        <ol>
+            <li>1. Momos</li>
+            <li>2. Pizza</li>
+            <li>3. Noodles</li>
+            <li>4. Pasta</li>
+        </ol>
 
-        <h2><span style="color:red">Facebook Login</span></h2>
+        <h4><u>Unordered Lists</u></h4>
+        <h5><b>Clothes:</b></h5>
+        <ul>
+            <li>1. Shirt</li>
+            <li>2. Skirt</li>
+            <li>3. Pants</li>
+        </ul>
+
+        <table>
+            <h3>Book Details</h3>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publication Year</th>
+            </tr>
+            <tr>
+                <td>The Catcher in the Rye</td>
+                <td>J.D. Salinger</td>
+                <td>1951</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>1960</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>1949</td>
+            </tr>
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>1925</td>
+            </tr>
+            <tr>
+                <td>Harry Potter and the Sorcerer's Stone</td>
+                <td>J.K. Rowling</td>
+                <td>1997</td>
+            </tr>
+        </table>
+
+        <h4>Image Tag</h4>
+        <img src="images/facebook-icon.png" alt="Facebook Icon" class="facebookIcon">
+
+        <h2><span style="color:red">Facebook Login</span></h2> 
         <form id="loginForm">
             <label for="username">1. Username:</label>
             <input type="text" id="username" name="username" required>
@@ -84,13 +190,12 @@
                 <p>Don't have an account? <a href="#">Sign up</a></p>
             </div>
         </form>
-    </div>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Successfully Logged in with Facebook");
-        });
-    </script>
+        <hr>
+
+        <!-- Your existing login form code goes here -->
+        <!-- Use the existing styling for the form -->
+        <!-- The second login form has been removed -->
+    </div>
 </body>
 </html>
