@@ -78,6 +78,81 @@
     
     <table><tr><th>Title</th><th>Author</th><th>Publication Year</th></tr><tr><td>"The Catcher in the Rye"</td><td>J.D. Salinger</td><td>1951</td></tr><tr><td>"To Kill a Mockingbird"</td><td>Harper Lee</td><td>1960</td></tr><tr><td>"1984"</td><td>George Orwell</td><td>1949</td></tr><tr><td>"The Great Gatsby"</td><td>F. Scott Fitzgerald</td><td>1925</td></tr><tr><td>"Harry Potter and the Sorcerer's Stone"</td><td>J.K. Rowling</td><td>1997</td></tr></table>
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #1877f2;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #145688;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="facebook-logo.png" alt="Facebook Logo">
+        <form>
+            <input type="text" placeholder="Email or Phone">
+            <input type="password" placeholder="Password">
+            <button type="button" onclick="login()">Log In</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            alert("Performing login (this is a static example, no real action).");
+        }
+    </script>
+
+</body>
+</html>
+
 </body>
 </html>
 
